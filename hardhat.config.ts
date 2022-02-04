@@ -3,6 +3,8 @@ import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-ethers';
 import 'hardhat-spdx-license-identifier';
 
+require('dotenv').config()
+
 const config: HardhatUserConfig = {
   spdxLicenseIdentifier: {
     overwrite: true,
