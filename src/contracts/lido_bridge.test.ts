@@ -31,7 +31,7 @@ describe('lido defi bridge', function () {
 
     wstETHAddress = '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0';
     lidoStakingAddress = '0xae7ab96520de3a18e5e111b5eaab095312d7fe84';
-    signerAddress = '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe';
+    signerAddress = '0x23618e81e3f5cdf7f54c3d65f7fbc0abf5b21e8f';
 
     await hre.network.provider.request({
       method: 'hardhat_impersonateAccount',
@@ -48,14 +48,14 @@ describe('lido defi bridge', function () {
 
     await signer.sendTransaction({
       to: bridgeProxy.address,
-      value: parseEther('350000')
+      value: parseEther('350')
     });
   });
 
   it('should stake eth and get stETH back in lido', async () => {
     // Call convert to swap ETH to ERC20 tokens and return them to caller.
 
-    const depositETH = '300000';
+    const depositETH = '100';
 
     console.log(`Depositing ${depositETH}`);
 
@@ -73,7 +73,7 @@ describe('lido defi bridge', function () {
         erc20Address: wstETHAddress
       },
       {},
-      BigInt(parseEther('300000').toString()),
+      BigInt(parseEther(depositETH).toString()),
       1n,
       0n
     );
