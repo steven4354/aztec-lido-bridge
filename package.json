@@ -15,7 +15,7 @@
     "transform": {
       "^.+\\.ts$": "ts-jest"
     },
-    "testRegex": "lido_bridge.test.ts",
+    "testRegex": ["lido_bridge.test.ts", "notional_bridge.test.ts"],
     "rootDir": "./src",
     "testTimeout": 200000,
     "slowTestThreshold": 60

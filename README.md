@@ -11,6 +11,9 @@ npx hardhat node
 change the `signerAddress` in `src/contracts/lido_bridge.test.ts` to one of the wallets in from the console running
 `npx hardhat node`
 
+```
+yarn test
+```
 
 ## Troubleshooting
 
