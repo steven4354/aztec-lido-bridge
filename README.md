@@ -1,4 +1,6 @@
 
+## Getting started
+
 Use node version 16
 
 Create .env from .env.sample
@@ -9,6 +11,9 @@ npx hardhat node
 ```
 
 change the `signerAddress` in `src/contracts/lido_bridge.test.ts` to one of the wallets in from the console running
+`npx hardhat node`
+
+change the `signerAddress` in `src/contracts/notional_bridge.test.ts` to one of the wallets in from the console running
 `npx hardhat node`
 
 ```
