@@ -13,3 +13,4 @@ yarn.lock
 *.swp
 .next
 .DS_STORE
+src/artifacts/
